@@ -1,18 +1,11 @@
-import {AnimeSeries, Footer} from "./components/AnimeSeries"
+import AnimeSeries from "./components/AnimeSeries"
 
 export const App = () => {
   return (
-    <div>
-      <AnimeSeries /><br />
-      <AnimeSeries /><br />
-      <AnimeSeries /><br />
-      <AnimeSeries /><br />
-      <AnimeSeries /><br />
-      <Footer />
-    </div>
-
-
-   
+    <>
+      <AnimeSeries />
+    </>
+        
   )
   
 }

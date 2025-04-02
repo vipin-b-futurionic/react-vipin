@@ -1,34 +1,13 @@
 import seriesData from "../api/seriesData.json"
+import { SeriesCard } from "./SeriesCard"
 
-const AnimeSeries = () =>{
+const AnimeSeries = () => {
     return (
       <ul>
-        {seriesData.map( (curElem) => {
-          return (
-            <li key = {curElem.id}>
-              <div>
-                <img 
-                src={curElem.img_url} 
-                alt="qot.jpg"
-                width="40%"
-                height="40%"
-                />
-              </div>
+        {seriesData.map( (curElem) => (
+          <SeriesCard key={curElem.id} data={curElem} />
 
-              <h2>Name: {curElem.name}</h2>
-              <h3>Rating:{curElem.rating} </h3>
-              <p> Summary: {curElem.description}</p>
-              <p> genre: {curElem.genre}</p>
-              <p> cast: {curElem.cast}</p>
-              <a href={curElem.watch_url} target="_blank">
-              <button>Watch Now</button>
-              
-              </a>
-
-            </li>
-          )
-
-        })}
+        ))}
         
       </ul>
     )
